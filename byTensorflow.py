@@ -27,7 +27,7 @@ model = keras.Sequential([
     keras.layers.Conv2D(32, (3, 3), activation='relu',input_shape=(28, 28, 1)),
     keras.layers.MaxPooling2D(pool_size=(2, 2)),
     keras.layers.Flatten(),
-    keras.layers.Dense(100, activation='relu'),
+    keras.layers.Dense(128, activation='relu'),
     keras.layers.Dense(10, activation='softmax')
 ])
 test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
